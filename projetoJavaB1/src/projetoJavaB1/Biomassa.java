@@ -1,6 +1,7 @@
 package projetoJavaB1;
 
 public class Biomassa extends Energia {
+	
 	private double combustao;
 	private double gaseificacao;
 	private double pirolise;
@@ -12,13 +13,32 @@ public class Biomassa extends Energia {
 		this.gaseificacao = gaseificacao;
 		this.pirolise = pirolise;
 	}
-
+	
 	public void imprimirInfo() {
 		System.out.println("\nNome da Empresa: " + getNomeEmpresa() + "CPF: " + getCnpj() + "\nConsumo: " + getConsumo()
-				+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
-				+ "Percentual: " + getPercAbt() + "\nCombustão: " + combustao + "\nGaseificação: " + gaseificacao
-				+ "\nPirolise: " + pirolise);
+		+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
+		+ "Percentual: " + getPercAbt());
 	}
+	
+	@Override
+	public void fonte (String fonte)
+	{
+		System.out.println("A fonta da energia é o sol.");
+	}
+	
+	@Override
+	public void vidaUtil (int V)
+	{
+		System.out.println("A vida últi é "+25+" anos, funcionando com 80% do seu desempenho original.");
+	}
+	
+	@Override 
+	public void capacidade (float capacidade)
+	{
+		System.out.println("No Brasil, a capacidade é de "+10+"GW de potência");
+	}
+	
+	//Getters e Setters 
 
 	public double getCombustao() {
 		return combustao;
@@ -43,5 +63,4 @@ public class Biomassa extends Energia {
 	public void setPirolise(double pirolise) {
 		this.pirolise = pirolise;
 	}
-
 }
