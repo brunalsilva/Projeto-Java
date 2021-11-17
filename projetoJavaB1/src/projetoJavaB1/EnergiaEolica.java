@@ -11,6 +11,14 @@ public class EnergiaEolica extends Energia {
 		this.velVento = velVento;
 		this.denVento = denVento;
 	}
+	
+	public void imprimirInfo()
+	{
+		System.out.println("\nNome da Empresa: " +getNomeEmpresa()+ "\nCNPJ: " +getCnpj()+ "\nMédia de Consumo: " 
+	+getConsumo()+ "\nOrçamento: " +getOrcamento()+ "\nRegiao: " +getRegiao()+ "\nFaturamento: " +getFaturamento()+ 
+	"\nPercentual: " +getPercAbt()+ "\nInforme a Velocidade do Vento: " +velVento+ "\nInforme a Densidade (Opcional): " 
+	+denVento);
+	}
 
 	public double getVelVento() {
 		return velVento;
