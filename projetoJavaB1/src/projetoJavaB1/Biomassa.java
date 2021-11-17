@@ -1,7 +1,7 @@
 package projetoJavaB1;
 
 public class Biomassa extends Energia {
-	
+
 	private double combustao;
 	private double gaseificacao;
 	private double pirolise;
@@ -13,33 +13,38 @@ public class Biomassa extends Energia {
 		this.gaseificacao = gaseificacao;
 		this.pirolise = pirolise;
 	}
-	
+
 	public void imprimirInfo() {
 		System.out.println("\nNome da Empresa: " + getNomeEmpresa() + "CPF: " + getCnpj() + "\nConsumo: " + getConsumo()
-		+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
-		+ "Percentual: " + getPercAbt());
+				+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
+				+ "Percentual: " + getPercAbt());
 	}
-	
-	@Override
-	public void fonte (String fonte)
-	{
-		System.out.println("A fonta da energia é o sol.");
-	}
-	
-	@Override
-	public void vidaUtil (int V)
-	{
-		System.out.println("A vida últi é "+25+" anos, funcionando com 80% do seu desempenho original.");
-	}
-	
-	@Override 
-	public void capacidade (float capacidade)
-	{
-		System.out.println("No Brasil, a capacidade é de "+10+"GW de potência");
-	}
-	
-	//Getters e Setters 
 
+	@Override
+	public void fonte(String fonte) {
+		System.out.println(
+				"A fonte são esíduos sólidos e líquidos urbanos têm origens diversas e se encontra no lixo e esgoto");
+	}
+
+	@Override
+	public void vidaUtil(int V) {
+		System.out.println("o tempo de vida útil de uma usina biomassa é, em média " + 20 + " anos. ");
+	}
+
+	@Override
+	public void capacidade(float capacidade) {
+		System.out.println(
+				"Têm capacidade de gerar uma produção adicional de energia a curto prazo de " + 1.8 + " mil GWh ");
+	}
+
+	
+	// Valor do consumo calculo
+	public void custo(double custo) {
+		System.out.println("O custo anual é: " + 190 * getConsumo() * 30 * 12);
+	}
+
+	
+	// Getters e Setters
 	public double getCombustao() {
 		return combustao;
 	}
