@@ -25,7 +25,7 @@ public abstract class Energia {
 
 	}
 	
-	Scanner leia = new  Scanner(System.in);
+	Scanner leia = new Scanner(System.in);
 
     public void cadastroEmpresa()
     {
@@ -48,12 +48,24 @@ public abstract class Energia {
         this.faturamento = leia.nextFloat();
     }
     
-    
-	
 	abstract public void fonte (String fonte);
 	abstract public void vidaUtil (int V);
 	abstract public void capacidade (float capacidade);
 	abstract public void custo (double custo);
+	
+	int M=0;
+	int S=0;
+	int B=0;
+	int E=0;
+	
+	public void verificacao()
+	{
+		if (getRegiao()=="Nordeste")
+		{
+			M++;
+		}
+		
+	}
 
 	public String getNomeEmpresa() {
 		return nomeEmpresa;

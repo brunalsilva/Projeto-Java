@@ -27,6 +27,12 @@ public class Maremotriz extends Energia {
 	{
 		System.out.println("No Brasil, a capacidade é de "+120+"GW de potência");
 	}
+	
+	@Override
+	public void custo (double custo)
+	{
+		System.out.println("O custo anual é: "+100*getConsumo()*30*12);
+	}
 
 	public int getDesNivel() {
 		return desNivel;
