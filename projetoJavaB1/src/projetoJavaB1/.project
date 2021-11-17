@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>src_projetoJavaB1</name>
+=======
 	<name>projetoJavaB1</name>
+>>>>>>> 36b9086fdce6f84942d0457d6c9bec8a88c06eb6
 	<comment></comment>
 	<projects>
 	</projects>

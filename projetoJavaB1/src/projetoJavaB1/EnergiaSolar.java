@@ -2,13 +2,13 @@ package projetoJavaB1;
 
 public class EnergiaSolar extends Energia {
 		
+		private String tipo;
+	
 		public EnergiaSolar (String tipo,String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,double percAbt)
 		{
 			super(nomeEmpresa,cnpj,consumo,orcamento,regiao,faturamento,percAbt);
 			this.tipo = tipo;
 		}
-		
-		private String tipo;
 		
 		public void imprimirInfo() 
 		{
@@ -20,7 +20,7 @@ public class EnergiaSolar extends Energia {
 		@Override
 		public void fonte (String fonte)
 		{
-			System.out.println("A fonta da energia é o sol.");
+			System.out.println("A fonte da energia é o sol.");
 		}
 		
 		@Override
