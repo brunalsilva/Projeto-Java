@@ -7,13 +7,15 @@ public class Maremotriz extends Energia {
 	public Maremotriz(String fonte, int vidaUtil, float capacidade) {
 		super(fonte, vidaUtil, capacidade);
 	}
-	
-	public int getdesNivel() {
+
+	public int getDesNivel() {
 		return desNivel;
 	}
-	
-	public int setdesNivel(int desNivel) {
+
+	public void setDesNivel(int desNivel) {
 		this.desNivel = desNivel;
 	}
-
 }
+
+
+
