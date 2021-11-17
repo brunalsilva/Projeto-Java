@@ -47,6 +47,8 @@ public abstract class Energia {
         System.out.println("\nFaturamento da empresa: ");
         this.faturamento = leia.nextFloat();
     }
+    
+    
 	
 	abstract public void fonte (String fonte);
 	abstract public void vidaUtil (int V);
