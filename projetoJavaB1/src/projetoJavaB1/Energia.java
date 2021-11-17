@@ -2,11 +2,7 @@ package projetoJavaB1;
 
 import java.util.Scanner;
 
-<<<<<<< HEAD
-public class Energia {
-=======
 public abstract class Energia {
->>>>>>> 9a45f4fe5dd8cd51f10d6424128a72ba23f73370
 
 	private String nomeEmpresa;
 	private String cnpj;
@@ -28,41 +24,6 @@ public abstract class Energia {
 		this.percAbt = percAbt;
 
 	}
-<<<<<<< HEAD
-
-	public Energia(String fonte, int vidaUtil, float capacidade) {
-
-		this.fonte = fonte;
-		this.vidaUtil = vidaUtil;
-		this.capacidade = capacidade;
-
-	}
-	
-	Scanner leia = new  Scanner(System.in);
-	
-	public void cadastroEmpresa()
-	{
-		System.out.println("\nNome da Empresa: ");
-		this.nomeEmpresa = leia.next();
-		System.out.println("\nCNPJ: ");
-		this.cnpj = leia.next();
-		System.out.println("\nMédia de consumo de energia da empresa: ");
-		this.consumo = leia.nextFloat();
-		System.out.println("\nOrçamento disponível: ");
-		this.orcamento = leia.nextDouble();
-		System.out.println("\nRegião que a empresa se situa: ");
-		System.out.println("\n1- Norte ");
-		System.out.println("\n2- Nordeste ");
-		System.out.println("\n3- Centro oeste ");
-		System.out.println("\n4- Sudeste ");
-		System.out.println("\n5- Sul ");
-		this.regiao = leia.next();
-		System.out.println("\nFaturamento da empresa: ");
-		this.faturamento = leia.nextFloat();
-	}
-	
-	
-=======
 	
 	Scanner leia = new  Scanner(System.in);
 
@@ -91,7 +52,6 @@ public abstract class Energia {
 	abstract public void vidaUtil (int V);
 	abstract public void capacidade (float capacidade);
 
->>>>>>> 9a45f4fe5dd8cd51f10d6424128a72ba23f73370
 	public String getNomeEmpresa() {
 		return nomeEmpresa;
 	}
