@@ -34,6 +34,12 @@ public class EnergiaSolar extends Energia {
 		{
 			System.out.println("No Brasil, a capacidade é de "+10+"GW de potência");
 		}
+		
+		@Override
+		public void custo (double custo)
+		{
+			System.out.println("O custo anual é: "+150*getConsumo()*30*12);
+		}
 
 		public String getTipo() {
 			return tipo;

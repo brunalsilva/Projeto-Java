@@ -33,7 +33,7 @@ public abstract class Energia {
         this.nomeEmpresa = leia.next();
         System.out.println("\nCNPJ: ");
         this.cnpj = leia.next();
-        System.out.println("\nMédia de consumo de energia da empresa: ");
+        System.out.println("\nConsumo médio de energia da empresa em MWh/h: ");
         this.consumo = leia.nextFloat();
         System.out.println("\nOrçamento disponível: ");
         this.orcamento = leia.nextDouble();
@@ -51,6 +51,7 @@ public abstract class Energia {
 	abstract public void fonte (String fonte);
 	abstract public void vidaUtil (int V);
 	abstract public void capacidade (float capacidade);
+	abstract public void custo (double custo);
 
 	public String getNomeEmpresa() {
 		return nomeEmpresa;
