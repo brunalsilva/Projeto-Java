@@ -30,7 +30,7 @@ public class Empresa extends Energia {
 		        	}
 		       	       
 		        }while(getCnpj().length() != 14);
-		        System.out.println("\nConsumo médio de energia da empresa em MWh/h: ");
+		        System.out.println("\nConsumo médio de energia da empresa em KWh/h: ");
 		        this.consumo = leia.nextFloat();
 		        System.out.println("\nOrçamento disponível: ");
 		        this.orcamento = leia.nextDouble();
