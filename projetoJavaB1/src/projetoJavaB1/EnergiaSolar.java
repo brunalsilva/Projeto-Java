@@ -26,19 +26,24 @@ public class EnergiaSolar extends Energia {
 		@Override
 		public void vidaUtil (int V)
 		{
-			System.out.println("A vida últi é "+25+" anos, funcionando com 80% do seu desempenho original.");
+			System.out.println("\nA vida últi é "+25+" anos, funcionando com 80% do seu desempenho original.");
 		}
 		
 		@Override 
 		public void capacidade (float capacidade)
 		{
-			System.out.println("No Brasil, a capacidade é de "+10+"GW de potência");
+			System.out.println("\nNo Brasil, a capacidade é de "+10+"GW de potência");
 		}
 		
 		@Override
 		public void custo (double custo)
 		{
-			System.out.println("O custo anual é: "+150*getConsumo()*30*12);
+			System.out.println("\nO custo anual é: "+150*getConsumo()*30*12);
+		}
+		
+		public void tipo (String tipo)
+		{
+			System.out.println("\nTipos de energia solar: Térmica e Fotovoltaica.");
 		}
 
 		public String getTipo() {

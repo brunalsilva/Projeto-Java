@@ -33,6 +33,11 @@ public class Maremotriz extends Energia {
 	{
 		System.out.println("O custo anual é: "+100*getConsumo()*30*12);
 	}
+	
+	public void desNivel (int desNivel)
+	{
+		System.out.println("É preciso que o desnível das marés seja maior do que 7 metros.");
+	}
 
 	public int getDesNivel() {
 		return desNivel;
