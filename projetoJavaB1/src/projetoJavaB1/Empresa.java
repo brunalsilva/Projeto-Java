@@ -125,10 +125,18 @@ public class Empresa extends Energia {
 		    }while(op != 3);
 		    }
 		
-		
+		public void infoEmpresa()
+		{
+			System.out.println("\nConsumo médio de energia da empresa em KWh/h: ");
+	        this.consumo = leia.nextFloat();
+	        System.out.println("\nOrçamento disponível: ");
+	        this.orcamento = leia.nextDouble();
+	        System.out.println("\nFaturamento da empresa: ");
+	        this.faturamento = leia.nextFloat();
+		}
 		
 		@Override
-		public void fonte(String fonte) {
+ 		public void fonte(String fonte) {
 			
 			
 		}
