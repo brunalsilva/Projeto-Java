@@ -10,12 +10,7 @@ public class EnergiaEolica extends Energia {
 		this.velVento = velVento;
 	}
 	
-	public void imprimirInfo()
-	{
-		System.out.println("\nNome da Empresa: " +getNomeEmpresa()+ "\nCNPJ: " +getCnpj()+ "\nMédia de Consumo: " 
-	+getConsumo()+ "\nOrçamento: " +getOrcamento()+ "\nRegiao: " +getRegiao()+ "\nFaturamento: " +getFaturamento()+ 
-	"\nPercentual: " +getPercAbt());
-	}
+	
 
 	@Override
 	public void fonte (String fonte)

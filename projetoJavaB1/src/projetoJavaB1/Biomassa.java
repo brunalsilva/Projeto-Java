@@ -10,12 +10,7 @@ public class Biomassa extends Energia {
 		this.queima = queima;
 	}
 
-	public void imprimirInfo() {
-		System.out.println("\nNome da Empresa: " + getNomeEmpresa() + "CPF: " + getCnpj() + "\nConsumo: " + getConsumo()
-				+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
-				+ "Percentual: " + getPercAbt());
-	}
-	
+		
 	@Override
 	public void fonte(String fonte) 
 	{
