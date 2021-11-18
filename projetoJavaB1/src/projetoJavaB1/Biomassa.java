@@ -23,7 +23,7 @@ public class Biomassa extends Energia {
 	@Override
 	public void fonte(String fonte) {
 		System.out.println(
-				"A fonte são esíduos sólidos e líquidos urbanos têm origens diversas e se encontra no lixo e esgoto");
+				"A fonte são resíduos sólidos e líquidos urbanos têm origens diversas e se encontra no lixo e esgoto");
 	}
 
 	@Override
@@ -37,14 +37,10 @@ public class Biomassa extends Energia {
 				"Têm capacidade de gerar uma produção adicional de energia a curto prazo de " + 1.8 + " mil GWh ");
 	}
 
-	
-	// Valor do consumo calculo
 	public void custo(double custo) {
 		System.out.println("O custo anual é: " + 190 * getConsumo() * 30 * 12);
 	}
 
-	
-	// Getters e Setters
 	public double getCombustao() {
 		return combustao;
 	}

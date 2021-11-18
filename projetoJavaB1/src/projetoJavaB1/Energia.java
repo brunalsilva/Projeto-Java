@@ -61,16 +61,21 @@ public abstract class Energia {
 	abstract public void capacidade (float capacidade);
 	abstract public void custo (double custo);
 	
-	int M=0;
-	int S=0;
-	int B=0;
-	int E=0;
+	int M=0, S=0, B=0, E=0;
 	
 	public void verificacao()
 	{
+		if (getRegiao()=="Norte")
+		{
+			S++;
+		}
 		if (getRegiao()=="Nordeste")
 		{
-			M++;
+			M++; E++; S++;
+		}
+		if (getRegiao()=="Sul")
+		{
+			E++;
 		}
 		
 	}
