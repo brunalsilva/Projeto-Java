@@ -57,7 +57,6 @@ public abstract class Energia {
 	abstract public void fonte (String fonte);
 	abstract public void vidaUtil (int V);
 	abstract public void capacidade (float capacidade);
-	abstract public void custo (double custo);
 	
 	public void consumo()
 	{

@@ -16,13 +16,10 @@ public class TesteCadastro {
 				+ "/____/  /_/   /_/     /_/   \\__,_/  /____/         /_/      /_/     \\____/ ___  /   \\___/ \\__/  \\___/  \r\n"
 				+ "                                                                           /___/");
 		System.out.println("============================================================================================================");
-		System.out.println("Prezade Cliente, seja Bem-Vinde ao Futuro!!\nPor favor, prossiga com o seu Cadastro.");
-	
-
+		System.out.println("\n\t\t\tS  I  R  I  U  S         P  R  O  J  E  C  T         v1.0");
+		System.out.println("\n\t\t\t\tPrezade Cliente, seja bem-vinde ao futuro!\n\n");
 		
 		emp1.cadastroEmpresa();
-			
-		
 }
 	}
 

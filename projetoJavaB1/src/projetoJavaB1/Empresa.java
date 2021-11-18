@@ -151,12 +151,6 @@ public class Empresa extends Energia {
 		public void capacidade(float capacidade) {
 			
 		}
-
-		@Override
-		public void custo(double custo) {
-			
-			
-		}
 	
 	
 

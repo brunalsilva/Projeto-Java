@@ -10,13 +10,6 @@ public class EnergiaSolar extends Energia {
 			this.tipo = tipo;
 		}
 		
-		public void imprimirInfo() 
-		{
-			System.out.println("\nNome da Empresa: " + getNomeEmpresa() + "CPF: " + getCnpj() + "\nConsumo: " + getConsumo()
-					+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
-					+ "Percentual: " + getPercAbt());
-		}
-		
 		@Override
 		public void fonte (String fonte)
 		{
@@ -33,12 +26,6 @@ public class EnergiaSolar extends Energia {
 		public void capacidade (float capacidade)
 		{
 			System.out.println("\nNo Brasil, a capacidade é de "+10+"GW de potência");
-		}
-		
-		@Override
-		public void custo (double custo)
-		{
-			System.out.println("\nO custo anual é: "+150*getConsumo()*30*12);
 		}
 		
 		public void tipo (String tipo)

@@ -9,13 +9,6 @@ public class EnergiaEolica extends Energia {
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
 		this.velVento = velVento;
 	}
-	
-	public void imprimirInfo()
-	{
-		System.out.println("\nNome da Empresa: " +getNomeEmpresa()+ "\nCNPJ: " +getCnpj()+ "\nMédia de Consumo: " 
-	+getConsumo()+ "\nOrçamento: " +getOrcamento()+ "\nRegiao: " +getRegiao()+ "\nFaturamento: " +getFaturamento()+ 
-	"\nPercentual: " +getPercAbt());
-	}
 
 	@Override
 	public void fonte (String fonte)
@@ -26,19 +19,13 @@ public class EnergiaEolica extends Energia {
 	@Override
 	public void vidaUtil (int V)
 	{
-		System.out.println("A vida mínima últi é "+20+" anos, conforme Norma IEC 61400-1 (International Electrotechnical Commission).");
+		System.out.println("A vida mínima últi é "+20+" anos.");
 	}
 	
 	@Override 
 	public void capacidade (float capacidade)
 	{
 		System.out.println("No Brasil, a capacidade é de "+19+"GW de Potência. ");
-	}
-	
-	@Override
-	public void custo (double custo)
-	{
-		System.out.println("O custo Anual é de: "+375*getConsumo()*30*12);
 	}
 	
 	public void velVento (String velVento)

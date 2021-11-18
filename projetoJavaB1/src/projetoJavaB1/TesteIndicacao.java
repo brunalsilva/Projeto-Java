@@ -1,11 +1,19 @@
 package projetoJavaB1;
 
+import java.util.Scanner;
+
 public class TesteIndicacao {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Scanner leia = new Scanner(System.in);
+		
 		Empresa emp1 = new Empresa (null, null, 0, 0, 0, 0, 0);
+		EnergiaSolar solar = new EnergiaSolar (null, null, null, 0, 0, 0, 0, 0);
+		Biomassa bio = new Biomassa (null, null, 0, 0, 0, 0, 0, null);
+		EnergiaEolica eol = new EnergiaEolica (0,null,null,0,0,0,0,0);
+		Maremotriz mare = new Maremotriz (0,null,null,0,0,0,0,0);
 		
 		System.out.println("============================================================================================================");
 		System.out.println("_____________         _____                        ________                ________       _____        \r\n"
@@ -15,11 +23,73 @@ public class TesteIndicacao {
 				+ "/____/  /_/   /_/     /_/   \\__,_/  /____/         /_/      /_/     \\____/ ___  /   \\___/ \\__/  \\___/  \r\n"
 				+ "                                                                           /___/");
 		System.out.println("============================================================================================================");
-		System.out.println("Prezade Cliente, seja Bem-Vinde ao Futuro!!\nPor favor, prossiga com o seu Cadastro.");
+		System.out.println("\n\t\t\tS  I  R  I  U  S         P  R  O  J  E  C  T         v1.0");
+		System.out.println("\n\t\t\t\tPrezade Cliente, seja bem-vinde ao futuro!");
 		
-		emp1.cadastroEmpresa();
-		emp1.consumo();
-		emp1.verificacao();
+		System.out.println("\n\nGostaria de saber mais sobre as energias limpas e sustentáveis? \n1-Sim \n2-Não");
+		int op = leia.nextInt();
+		if (op==1)
+		{
+			do
+			{
+			System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+			op = leia.nextInt();
+				switch (op)
+				{
+				case 1:
+					solar.fonte(null);
+					solar.tipo(null);
+					solar.vidaUtil(0);
+					solar.capacidade(0);
+					break;
+			
+				case 2:
+					bio.fonte(null);
+					bio.queima(null);
+					bio.vidaUtil(0);
+					bio.capacidade(0);
+					break;
+			
+				case 3:
+					eol.fonte(null);
+					eol.velVento(null);
+					eol.vidaUtil(0);
+					eol.capacidade(0);
+					break;
+			
+				case 4:
+					mare.fonte(null);
+					mare.desNivel(0);
+					mare.vidaUtil(0);
+					mare.capacidade(0);
+					break;
+					
+				default:
+					emp1.infoEmpresa();
+					emp1.consumo();
+					emp1.verificacao();
+					System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+					op = leia.nextInt();
+				}
+			}while(op>=1 || op<5 && op!=5);
+			
+		}
+		else if (op==2)
+		{
+			emp1.infoEmpresa();
+			emp1.consumo();
+			emp1.verificacao();
+		}
+		else
+		{	
+			do
+			{
+				System.out.println("\nOpção inválida. Tente novamente.");
+				System.out.println("\n\nGostaria de saber mais sobre as energias limpas e sustentáveis? \n1-Sim \n2-Não");
+				op = leia.nextInt();
+			}
+			while (op<1 || op>2);
+		}
 		
 	}
 

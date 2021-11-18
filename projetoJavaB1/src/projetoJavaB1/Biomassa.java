@@ -9,12 +9,6 @@ public class Biomassa extends Energia {
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
 		this.queima = queima;
 	}
-
-	public void imprimirInfo() {
-		System.out.println("\nNome da Empresa: " + getNomeEmpresa() + "CPF: " + getCnpj() + "\nConsumo: " + getConsumo()
-				+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
-				+ "Percentual: " + getPercAbt());
-	}
 	
 	@Override
 	public void fonte(String fonte) 
@@ -36,10 +30,6 @@ public class Biomassa extends Energia {
 	public void capacidade(float capacidade) {
 		System.out.println(
 				"Têm capacidade de gerar uma produção adicional de energia a curto prazo de " + 1.8 + " mil GWh ");
-	}
-
-	public void custo(double custo) {
-		System.out.println("O custo anual é: " + 190 * getConsumo() * 30 * 12);
 	}
 
 	public String getQueima() {
