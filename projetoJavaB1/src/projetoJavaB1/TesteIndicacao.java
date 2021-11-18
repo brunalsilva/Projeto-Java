@@ -68,10 +68,8 @@ public class TesteIndicacao {
 					emp1.infoEmpresa();
 					emp1.consumo();
 					emp1.verificacao();
-					System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
-					op = leia.nextInt();
 				}
-			}while(op>=1 || op<5 && op!=5);
+			}while(op!=5);
 			
 		}
 		else if (op==2)

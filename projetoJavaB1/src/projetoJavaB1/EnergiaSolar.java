@@ -10,11 +10,7 @@ public class EnergiaSolar extends Energia {
 			this.tipo = tipo;
 		}
 		
-<<<<<<< HEAD
-=======
-		
-		
->>>>>>> 96b8296c788303c345346ae5fca77a864e06d698
+
 		@Override
 		public void fonte (String fonte)
 		{
@@ -24,18 +20,18 @@ public class EnergiaSolar extends Energia {
 		@Override
 		public void vidaUtil (int V)
 		{
-			System.out.println("\nA vida últi é "+25+" anos, funcionando com 80% do seu desempenho original.");
+			System.out.println("A vida útil é "+25+" anos, funcionando com 80% do seu desempenho original.");
 		}
 		
 		@Override 
 		public void capacidade (float capacidade)
 		{
-			System.out.println("\nNo Brasil, a capacidade é de "+10+"GW de potência");
+			System.out.println("No Brasil, a capacidade é de "+10+"GW de potência");
 		}
 		
 		public void tipo (String tipo)
 		{
-			System.out.println("\nTipos de energia solar: Térmica e Fotovoltaica.");
+			System.out.println("Tipos de energia solar: Térmica e Fotovoltaica.");
 		}
 
 		public String getTipo() {

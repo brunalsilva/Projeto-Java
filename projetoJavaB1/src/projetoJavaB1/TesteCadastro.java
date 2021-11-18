@@ -20,12 +20,7 @@ public class TesteCadastro {
 		System.out.println("\n\t\t\t\tPrezade Cliente, seja bem-vinde ao futuro!\n\n");
 		
 		emp1.cadastroEmpresa();
-<<<<<<< HEAD
-}
-=======
 			
-		
->>>>>>> 96b8296c788303c345346ae5fca77a864e06d698
 	}
 }
 
