@@ -67,15 +67,12 @@ public class TesteCadastro {
 			{
 				regioesTxt.add("Sul");
 			}
-			
 		}
 		
-	
-			System.out.println("As empresas cadastradas são: "+empresas);	
-			System.out.println("Os CNPJs das empresas cadastradas são: "+cnpjs);
-			System.out.println("A região que as empresas se situam: "+regioesTxt);
+		System.out.println("As empresas cadastradas são: "+empresas);	
+		System.out.println("Os CNPJs das empresas cadastradas são: "+cnpjs);
+		System.out.println("A região que as empresas se situam: "+regioesTxt);
 		
-				    
 	}
 }
 

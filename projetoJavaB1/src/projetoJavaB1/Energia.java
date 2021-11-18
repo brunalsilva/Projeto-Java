@@ -13,7 +13,8 @@ public abstract class Energia {
 	protected double percAbt;
 
 	public Energia(String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,
-			double percAbt) {
+			double percAbt) 
+	{
 
 		this.nomeEmpresa = nomeEmpresa;
 		this.cnpj = cnpj;
@@ -64,11 +65,11 @@ public abstract class Energia {
 		{
 			System.out.println("O consumo de energia da empresa é baixo.");
 		}
-		if(getConsumo()>=1000 && getConsumo()<1500)
+		else if(getConsumo()>=1000 && getConsumo()<1500)
 		{
 			System.out.println("O consumo de energia da empresa é médio.");
 		}
-		if (getConsumo()>1500)
+		else if (getConsumo()>1500)
 		{
 			System.out.println("O consumo de energia da empresa é alto.");
 		}
@@ -82,11 +83,19 @@ public abstract class Energia {
 		{
 			S++;
 		}
-		if (getRegiao()== 2)
+		else if (getRegiao()== 2)
 		{
 			M++; E++; S++;
 		}
-		if (getRegiao()== 5)
+		else if (getRegiao()==3)
+		{
+			B++; S++;
+		}
+		else if (getRegiao()==4)
+		{
+			B++;
+		}
+		else if (getRegiao()== 5)
 		{
 			E++;
 		}
@@ -94,31 +103,31 @@ public abstract class Energia {
 		{
 			M++;
 		}
-		if (getOrcamento()>=20000 && getOrcamento()<25000 && getRegiao()==1)
+		else if (getOrcamento()>=20000 && getOrcamento()<25000 && getRegiao()==1)
 		{
 			S++;
 		}
-		if (getOrcamento()>=25000 && getOrcamento()<30000 && getRegiao()==3 || getRegiao()==4)
+		else if (getOrcamento()>=25000 && getOrcamento()<30000 && getRegiao()==3 || getRegiao()==4)
 		{
 			B++;
 		}
-		if (getOrcamento()>30000 && getRegiao()==2 || getRegiao()==5)
+		else if (getOrcamento()>30000 && getRegiao()==2 || getRegiao()==5)
 		{
 			E++;
 		}
-		if(getConsumo()<1000)
+		else if(getConsumo()<1000)
 		{
 			S++;
 		}
-		if(getConsumo()>=1000 && getConsumo()<1500)
+		else if(getConsumo()>=1000 && getConsumo()<1500)
 		{
 			E++;
 		}
-		if (getConsumo()>1500 && getRegiao()==2)
+		else if (getConsumo()>1500 && getRegiao()==2)
 		{
 			M++;
 		}
-		if (getConsumo()>1500)
+		else if (getConsumo()>1500)
 		{
 			B++;
 		}
