@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public abstract class Energia {
 
-	private String nomeEmpresa;
-	private String cnpj;
-	private float consumo;
-	private double orcamento;
-	private String regiao;
-	private float faturamento;
-	private double percAbt;
+	protected String nomeEmpresa;
+	protected String cnpj;
+	protected float consumo;
+	protected double orcamento;
+	protected String regiao;
+	protected float faturamento;
+	protected double percAbt;
 
 	public Energia(String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,
 			double percAbt) {
@@ -27,26 +27,34 @@ public abstract class Energia {
 	
 	Scanner leia = new Scanner(System.in);
 
-    public void cadastroEmpresa()
-    {
-        System.out.println("\nNome da Empresa: ");
-        this.nomeEmpresa = leia.next();
-        System.out.println("\nCNPJ: ");
-        this.cnpj = leia.next();
-        System.out.println("\nConsumo médio de energia da empresa em MWh/h: ");
-        this.consumo = leia.nextFloat();
-        System.out.println("\nOrçamento disponível: ");
-        this.orcamento = leia.nextDouble();
-        System.out.println("\nRegião que a empresa se situa: ");
-        System.out.println("\n1- Norte ");
-        System.out.println("\n2- Nordeste ");
-        System.out.println("\n3- Centro oeste ");
-        System.out.println("\n4- Sudeste ");
-        System.out.println("\n5- Sul ");
-        this.regiao = leia.next();
-        System.out.println("\nFaturamento da empresa: ");
-        this.faturamento = leia.nextFloat();
-    }
+	  public void cadastroEmpresa()
+	    {
+	        System.out.println("\nNome da Empresa: ");
+	        this.nomeEmpresa = leia.next();
+	        System.out.println("\nCNPJ: ");
+	        this.cnpj = leia.next();
+	        do
+	        {
+	        System.out.println("\n--CNPJ Inválido!!");
+	        }while(getCnpj().length() != 14);
+	        System.out.println("\nConsumo médio de energia da empresa em MWh/h: ");
+	        this.consumo = leia.nextFloat();
+	        System.out.println("\nOrçamento disponível: ");
+	        this.orcamento = leia.nextDouble();
+	        do
+	        {
+	        System.out.println("\nRegião que a empresa se situa: ");
+	        System.out.println("\n1- Norte ");
+	        System.out.println("\n2- Nordeste ");
+	        System.out.println("\n3- Centro oeste ");
+	        System.out.println("\n4- Sudeste ");
+	        System.out.println("\n5- Sul ");
+	        this.regiao = leia.next();
+	        }while(getRegiao() != "Norte"|| getRegiao() != "Sul" || getRegiao() != "Centro oeste" || getRegiao() != "Sudeste"|| getRegiao() != "Nordeste");
+	        System.out.println("\nFaturamento da empresa: ");
+	        this.faturamento = leia.nextFloat();
+	    }
+	    
     
 	abstract public void fonte (String fonte);
 	abstract public void vidaUtil (int V);
