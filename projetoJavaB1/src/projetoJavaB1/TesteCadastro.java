@@ -10,7 +10,7 @@ public class TesteCadastro {
 		
 		emp1.cadastroEmpresa();
 		
-		
+		//Testando
 		    
 	}
 }
