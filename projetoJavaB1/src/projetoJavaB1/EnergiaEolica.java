@@ -2,14 +2,12 @@ package projetoJavaB1;
 
 public class EnergiaEolica extends Energia {
 	
-	private double velVento;
-	private double denVento;
+	public double velVento;
 	
-	public EnergiaEolica(double velVento, double denVento, String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,double percAbt)
+	public EnergiaEolica(double velVento, String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,double percAbt)
 	{
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
 		this.velVento = velVento;
-		this.denVento = denVento;
 	}
 	
 	public void imprimirInfo()
@@ -18,7 +16,7 @@ public class EnergiaEolica extends Energia {
 	+getConsumo()+ "\nOrçamento: " +getOrcamento()+ "\nRegiao: " +getRegiao()+ "\nFaturamento: " +getFaturamento()+ 
 	"\nPercentual: " +getPercAbt());
 	}
-	
+
 	@Override
 	public void fonte (String fonte)
 	{
@@ -42,6 +40,11 @@ public class EnergiaEolica extends Energia {
 	{
 		System.out.println("O custo Anual é de: "+375*getConsumo()*30*12);
 	}
+	
+	public void velVento (String velVento)
+	{
+		System.out.println("O vento precisa atingir uma velocidade mínima de 10km/h para que a turbina funcione.");
+	}
 
 	public double getVelVento() {
 		return velVento;
@@ -49,13 +52,5 @@ public class EnergiaEolica extends Energia {
 
 	public void setVelVento(double velVento) {
 		this.velVento = velVento;
-	}
-
-	public double getDenVento() {
-		return denVento;
-	}
-
-	public void setDenVento(double denVento) {
-		this.denVento = denVento;
 	}
 }

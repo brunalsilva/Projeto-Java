@@ -2,16 +2,12 @@ package projetoJavaB1;
 
 public class Biomassa extends Energia {
 
-	private double combustao;
-	private double gaseificacao;
-	private double pirolise;
+	private String queima;
 
 	public Biomassa(String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,
-			double percAbt, double combustao, double gaseificacao, double pirolise) {
+			double percAbt, String queima) {
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
-		this.combustao = combustao;
-		this.gaseificacao = gaseificacao;
-		this.pirolise = pirolise;
+		this.queima = queima;
 	}
 
 	public void imprimirInfo() {
@@ -19,11 +15,16 @@ public class Biomassa extends Energia {
 				+ "Orçamento: " + getOrcamento() + "\nRegiao: " + getRegiao() + "Faturamento: " + getFaturamento()
 				+ "Percentual: " + getPercAbt());
 	}
-
+	
 	@Override
-	public void fonte(String fonte) {
-		System.out.println(
-				"A fonte são resíduos sólidos e líquidos urbanos têm origens diversas e se encontra no lixo e esgoto");
+	public void fonte(String fonte) 
+	{
+		System.out.println("A fonte são resíduos sólidos e líquidos urbanos têm origens diversas e se encontra no lixo e esgoto");
+	}
+	
+	public void queima (String queima)
+	{
+		System.out.println("Existem três tipos de queima de matéria orgânica para a energia de biomassa: combustão direta, gaseificação, termoquímica e pirólise");
 	}
 
 	@Override
@@ -41,27 +42,13 @@ public class Biomassa extends Energia {
 		System.out.println("O custo anual é: " + 190 * getConsumo() * 30 * 12);
 	}
 
-	public double getCombustao() {
-		return combustao;
+	public String getQueima() {
+		return queima;
 	}
 
-	public void setCombustao(double combustao) {
-		this.combustao = combustao;
+	public void setQueima(String queima) {
+		this.queima = queima;
 	}
-
-	public double getGaseificacao() {
-		return gaseificacao;
-	}
-
-	public void setGaseificacao(double gaseificacao) {
-		this.gaseificacao = gaseificacao;
-	}
-
-	public double getPirolise() {
-		return pirolise;
-	}
-
-	public void setPirolise(double pirolise) {
-		this.pirolise = pirolise;
-	}
+	
+	
 }
