@@ -10,6 +10,11 @@ public class EnergiaSolar extends Energia {
 			this.tipo = tipo;
 		}
 		
+<<<<<<< HEAD
+=======
+		
+		
+>>>>>>> 96b8296c788303c345346ae5fca77a864e06d698
 		@Override
 		public void fonte (String fonte)
 		{

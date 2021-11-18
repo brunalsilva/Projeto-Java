@@ -9,6 +9,11 @@ public class EnergiaEolica extends Energia {
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
 		this.velVento = velVento;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 96b8296c788303c345346ae5fca77a864e06d698
 
 	@Override
 	public void fonte (String fonte)
