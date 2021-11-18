@@ -4,7 +4,7 @@ public class Maremotriz extends Energia {
 	
 	public int desNivel;
 
-	public Maremotriz(int desNivel, String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,double percAbt) 
+	public Maremotriz(int desNivel, String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,double percAbt) 
 	{
 		super(nomeEmpresa,cnpj,consumo,orcamento,regiao,faturamento,percAbt);
 		this.desNivel = desNivel;

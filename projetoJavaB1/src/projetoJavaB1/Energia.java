@@ -8,11 +8,11 @@ public abstract class Energia {
 	protected String cnpj;
 	protected float consumo;
 	protected double orcamento;
-	protected String regiao;
+	protected int regiao;
 	protected float faturamento;
 	protected double percAbt;
 
-	public Energia(String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,
+	public Energia(String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,
 			double percAbt) {
 
 		this.nomeEmpresa = nomeEmpresa;
@@ -40,17 +40,14 @@ public abstract class Energia {
 	        System.out.println("\nConsumo médio de energia da empresa em MWh/h: ");
 	        this.consumo = leia.nextFloat();
 	        System.out.println("\nOrçamento disponível: ");
-	        this.orcamento = leia.nextDouble();
-	        do
-	        {
+	        this.orcamento = leia.nextDouble(); 
 	        System.out.println("\nRegião que a empresa se situa: ");
 	        System.out.println("\n1- Norte ");
 	        System.out.println("\n2- Nordeste ");
 	        System.out.println("\n3- Centro oeste ");
 	        System.out.println("\n4- Sudeste ");
 	        System.out.println("\n5- Sul ");
-	        this.regiao = leia.next();
-	        }while(getRegiao() != "Norte"|| getRegiao() != "Sul" || getRegiao() != "Centro oeste" || getRegiao() != "Sudeste"|| getRegiao() != "Nordeste");
+	        this.regiao = leia.nextInt();
 	        System.out.println("\nFaturamento da empresa: ");
 	        this.faturamento = leia.nextFloat();
 	    }
@@ -65,15 +62,15 @@ public abstract class Energia {
 	
 	public void verificacao()
 	{
-		if (getRegiao()=="Norte")
+		if (getRegiao()== 1)
 		{
 			S++;
 		}
-		if (getRegiao()=="Nordeste")
+		if (getRegiao()== 2)
 		{
 			M++; E++; S++;
 		}
-		if (getRegiao()=="Sul")
+		if (getRegiao()== 5)
 		{
 			E++;
 		}
@@ -112,11 +109,11 @@ public abstract class Energia {
 		this.orcamento = orcamento;
 	}
 
-	public String getRegiao() {
+	public int getRegiao() {
 		return regiao;
 	}
 
-	public void setRegiao(String regiao) {
+	public void setRegiao(int regiao) {
 		this.regiao = regiao;
 	}
 

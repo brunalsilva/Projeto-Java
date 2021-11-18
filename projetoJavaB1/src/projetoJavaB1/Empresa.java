@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Empresa extends Energia {
 
-	public Empresa(String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,
+	public Empresa(String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,
 			double percAbt) {
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
 		// TODO Auto-generated constructor stub
@@ -13,7 +13,7 @@ public class Empresa extends Energia {
 		public int op = 0,lugar;
 		
 		Scanner leia = new Scanner(System.in);
-
+		@Override
 		  public void cadastroEmpresa()
 		    {
 		        System.out.println("\nNome da Empresa: ");
@@ -40,23 +40,30 @@ public class Empresa extends Energia {
 		        System.out.println("\n3- Centro oeste ");
 		        System.out.println("\n4- Sudeste ");
 		        System.out.println("\n5- Sul ");
-		        this.regiao = leia.next();
-		        do
+		        this.regiao= leia.nextInt();
+		        if(getRegiao() >= 1 && getRegiao() <= 5)
 		        {
+		        	System.out.println("\nFaturamento da empresa: ");
+			        this.faturamento = leia.nextFloat();
+		        }else {
+		        	
+		       do {
 		        System.out.println("\nRegião que a empresa se situa: ");
 		        System.out.println("\n1- Norte ");
 		        System.out.println("\n2- Nordeste ");
 		        System.out.println("\n3- Centro oeste ");
 		        System.out.println("\n4- Sudeste ");
 		        System.out.println("\n5- Sul ");
-		        op = leia.nextInt();
+		        this.regiao= leia.nextInt();
+		        } while(getRegiao() < 1 || getRegiao() > 5);
 		        
-		        }while(op => 1 && op <= 5);
+		        	
+		        
 		        
 		        System.out.println("\nFaturamento da empresa: ");
 		        this.faturamento = leia.nextFloat();
-		    
-	}
+		        }
+		    }
 
 		@Override
 		public void fonte(String fonte) {

@@ -4,7 +4,7 @@ public class EnergiaSolar extends Energia {
 		
 		private String tipo;
 	
-		public EnergiaSolar (String tipo,String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,double percAbt)
+		public EnergiaSolar (String tipo,String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,double percAbt)
 		{
 			super(nomeEmpresa,cnpj,consumo,orcamento,regiao,faturamento,percAbt);
 			this.tipo = tipo;

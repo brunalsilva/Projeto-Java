@@ -5,7 +5,7 @@ public class EnergiaEolica extends Energia {
 	private double velVento;
 	private double denVento;
 	
-	public EnergiaEolica(double velVento, double denVento, String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,double percAbt)
+	public EnergiaEolica(double velVento, double denVento, String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,double percAbt)
 	{
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
 		this.velVento = velVento;

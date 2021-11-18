@@ -6,7 +6,7 @@ public class Biomassa extends Energia {
 	private double gaseificacao;
 	private double pirolise;
 
-	public Biomassa(String nomeEmpresa, String cnpj, float consumo, double orcamento, String regiao, float faturamento,
+	public Biomassa(String nomeEmpresa, String cnpj, float consumo, double orcamento, int regiao, float faturamento,
 			double percAbt, double combustao, double gaseificacao, double pirolise) {
 		super(nomeEmpresa, cnpj, consumo, orcamento, regiao, faturamento, percAbt);
 		this.combustao = combustao;
