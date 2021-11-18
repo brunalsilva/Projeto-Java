@@ -37,7 +37,7 @@ public abstract class Energia {
 	        {
 	        System.out.println("\n--CNPJ Inválido!!");
 	        }while(getCnpj().length() != 14);
-	        System.out.println("\nConsumo médio de energia da empresa em MWh/h: ");
+	        System.out.println("\nConsumo médio de energia da empresa em KWh/h: ");
 	        this.consumo = leia.nextFloat();
 	        System.out.println("\nOrçamento disponível: ");
 	        this.orcamento = leia.nextDouble(); 
@@ -58,10 +58,26 @@ public abstract class Energia {
 	abstract public void capacidade (float capacidade);
 	abstract public void custo (double custo);
 	
-	int M=0, S=0, B=0, E=0;
+	public void consumo()
+	{
+		if(getConsumo()<1000)
+		{
+			System.out.println("O consumo de energia da empresa é baixo.");
+		}
+		if(getConsumo()>=1000 && getConsumo()<1500)
+		{
+			System.out.println("O consumo de energia da empresa é médio.");
+		}
+		if (getConsumo()>1500)
+		{
+			System.out.println("O consumo de energia da empresa é alto.");
+		}
+	}
 	
 	public void verificacao()
 	{
+		int M=0, S=0, B=0, E=0;
+		
 		if (getRegiao()== 1)
 		{
 			S++;
@@ -73,6 +89,55 @@ public abstract class Energia {
 		if (getRegiao()== 5)
 		{
 			E++;
+		}
+		if (getOrcamento()>=15000 && getOrcamento()<20000 && getRegiao()==2)
+		{
+			M++;
+		}
+		if (getOrcamento()>=20000 && getOrcamento()<25000 && getRegiao()==1)
+		{
+			S++;
+		}
+		if (getOrcamento()>=25000 && getOrcamento()<30000 && getRegiao()==3 || getRegiao()==4)
+		{
+			B++;
+		}
+		if (getOrcamento()>30000 && getRegiao()==2 || getRegiao()==5)
+		{
+			E++;
+		}
+		if(getConsumo()<1000)
+		{
+			S++;
+		}
+		if(getConsumo()>=1000 && getConsumo()<1500)
+		{
+			E++;
+		}
+		if (getConsumo()>1500 && getRegiao()==2)
+		{
+			M++;
+		}
+		if (getConsumo()>1500)
+		{
+			B++;
+		}
+		
+		if(S>B && S>E && S>M)
+		{
+			System.out.println("A energia solar é a mais indicada.");
+		}
+		else if(B>S && B>E && B>M)
+		{
+			System.out.println("A energia biomassa é a mais indicada.");
+		}
+		else if(E>B && E>S && E>M)
+		{
+			System.out.println("A energia eólica é a mais indicada.");
+		}
+		else if(M>B && M>E && M>S)
+		{
+			System.out.println("A energia maremotriz é a mais indicada.");
 		}
 		
 	}
