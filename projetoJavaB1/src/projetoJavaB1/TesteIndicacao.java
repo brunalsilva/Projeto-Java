@@ -79,7 +79,6 @@ public class TesteIndicacao {
 			while(op>5 || op <1)
 			{
 			
-				if(op>5 || op<1)
 				{
 					System.out.println("\nOpção inválida. Tente novamente.");
 					System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
@@ -107,6 +106,71 @@ public class TesteIndicacao {
 				System.out.println("\nOpção inválida. Tente novamente.");
 				System.out.println("\n\nGostaria de saber mais sobre as energias limpas e sustentáveis? \n1-Sim \n2-Não");
 				op = leia.nextInt();
+				if (op==1)
+				{
+					do
+					{
+					System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+					op = leia.nextInt();
+						if(op==1)
+						{
+							solar.fonte(null);
+							solar.tipo(null);
+							solar.vidaUtil(0);
+							solar.capacidade(0);
+							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+							op = leia.nextInt();
+						}
+						if(op==2)
+						{	bio.fonte(null);
+							bio.queima(null);
+							bio.vidaUtil(0);
+							bio.capacidade(0);
+							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+							op = leia.nextInt();
+						}
+						if(op==3)
+						{	eol.fonte(null);
+							eol.velVento(null);
+							eol.vidaUtil(0);
+							eol.capacidade(0);
+							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+							op = leia.nextInt();
+						}
+						if(op==4)
+						{	mare.fonte(null);
+							mare.desNivel(0);
+							mare.vidaUtil(0);
+							mare.capacidade(0);
+							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+							op = leia.nextInt();
+						}
+						if(op>5 || op<1)
+						{
+							System.out.println("\nOpção inválida. Tente novamente.");
+							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+							op = leia.nextInt();
+						}
+						
+					}while(op>=1 && op<5);
+					
+					while(op>5 || op <1)
+					{
+					
+						{
+							System.out.println("\nOpção inválida. Tente novamente.");
+							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
+							op = leia.nextInt();
+						}
+					}
+					
+					if(op==5)
+					{
+						emp1.infoEmpresa();
+						emp1.consumo();
+						emp1.verificacao();
+					}
+				}
 			}
 			while (op<1 || op>2);
 		}

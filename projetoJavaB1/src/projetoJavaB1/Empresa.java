@@ -27,6 +27,7 @@ public class Empresa extends Energia {
 
 	{
 		do {
+			
 			System.out.println("----------------------------------------");
 			System.out.println("\n(1) - Cadastrar nova empresa: ");
 			System.out.println("\n(2) - Me mostre a lista de empresas cadastradas, seus CNPJS e suas regiões: ");
@@ -54,6 +55,7 @@ public class Empresa extends Energia {
 				this.consumo = leia.nextFloat();
 				System.out.println("\nOrçamento disponível: ");
 				this.orcamento = leia.nextDouble();
+				
 				System.out.println("\nRegião que a empresa se situa: ");
 				System.out.println("\n1- Norte ");
 				System.out.println("\n2- Nordeste ");
@@ -63,6 +65,7 @@ public class Empresa extends Energia {
 				this.regiao = leia.nextInt();
 				if (getRegiao() >= 1 && getRegiao() <= 5) {
 					regiaoN.add(getRegiao());
+					this.regiao = 0;
 					System.out.println("\nFaturamento da empresa: ");
 					this.faturamento = leia.nextFloat();
 				} else {
@@ -76,12 +79,14 @@ public class Empresa extends Energia {
 						this.regiao = leia.nextInt();
 					} while (getRegiao() < 1 || getRegiao() > 5);
 					regiaoN.add(getRegiao());
+					this.regiao = 0;
 					System.out.println("\nFaturamento da empresa: ");
 					this.faturamento = leia.nextFloat();
 
 				}
 				break;
 			case 2: {
+					
 				for (int i = 0; i < regiaoN.size(); i++) {
 					if (regiaoN.get(i) == 1) {
 						regioesTxt.add("Norte");
@@ -98,7 +103,7 @@ public class Empresa extends Energia {
 					if (regiaoN.get(i) == 5) {
 						regioesTxt.add("Sul");
 					}
-
+					regiaoN.clear();
 				}
 				System.out.println("As empresas cadastradas são: " + empresas);
 				System.out.println("Os CNPJs das empresas cadastradas são: " + cnpjs);
