@@ -36,6 +36,8 @@ public class TesteIndicacao {
 			op = leia.nextInt();
 				if(op==1)
 				{
+					
+					System.out.println("\n\n");
 					solar.fonte(null);
 					solar.tipo(null);
 					solar.vidaUtil(0);
@@ -44,7 +46,9 @@ public class TesteIndicacao {
 					op = leia.nextInt();
 				}
 				if(op==2)
-				{	bio.fonte(null);
+				{
+					System.out.println("\n\n");
+					bio.fonte(null);
 					bio.queima(null);
 					bio.vidaUtil(0);
 					bio.capacidade(0);
@@ -52,7 +56,9 @@ public class TesteIndicacao {
 					op = leia.nextInt();
 				}
 				if(op==3)
-				{	eol.fonte(null);
+				{
+					System.out.println("\n\n");
+					eol.fonte(null);
 					eol.velVento(null);
 					eol.vidaUtil(0);
 					eol.capacidade(0);
@@ -60,7 +66,9 @@ public class TesteIndicacao {
 					op = leia.nextInt();
 				}
 				if(op==4)
-				{	mare.fonte(null);
+				{	
+					System.out.println("\n\n");
+					mare.fonte(null);
 					mare.desNivel(0);
 					mare.vidaUtil(0);
 					mare.capacidade(0);
@@ -69,6 +77,7 @@ public class TesteIndicacao {
 				}
 				if(op>5 || op<1)
 				{
+					System.out.println("\n\n");
 					System.out.println("\nOpção inválida. Tente novamente.");
 					System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
 					op = leia.nextInt();
@@ -88,16 +97,20 @@ public class TesteIndicacao {
 			
 			if(op==5)
 			{
+				System.out.println("\n\tIniciar verificação.");
 				emp1.infoEmpresa();
 				emp1.consumo();
 				emp1.verificacao();
+				System.out.println("\n\n\nOperação finalizada.");
 			}
 		}
 		else if (op==2)
 		{
+			System.out.println("\n\tIniciar verificação.");
 			emp1.infoEmpresa();
 			emp1.consumo();
 			emp1.verificacao();
+			System.out.println("\n\n\tOperação finalizada.");
 		}
 		else
 		{	
@@ -114,6 +127,7 @@ public class TesteIndicacao {
 					op = leia.nextInt();
 						if(op==1)
 						{
+							System.out.println("\n\n");
 							solar.fonte(null);
 							solar.tipo(null);
 							solar.vidaUtil(0);
@@ -122,7 +136,10 @@ public class TesteIndicacao {
 							op = leia.nextInt();
 						}
 						if(op==2)
-						{	bio.fonte(null);
+							
+						{	
+							System.out.println("\n\n");
+							bio.fonte(null);
 							bio.queima(null);
 							bio.vidaUtil(0);
 							bio.capacidade(0);
@@ -130,7 +147,10 @@ public class TesteIndicacao {
 							op = leia.nextInt();
 						}
 						if(op==3)
-						{	eol.fonte(null);
+							
+						{	
+							System.out.println("\n\n");
+							eol.fonte(null);
 							eol.velVento(null);
 							eol.vidaUtil(0);
 							eol.capacidade(0);
@@ -138,7 +158,9 @@ public class TesteIndicacao {
 							op = leia.nextInt();
 						}
 						if(op==4)
-						{	mare.fonte(null);
+						{	
+							System.out.println("\n\n");
+							mare.fonte(null);
 							mare.desNivel(0);
 							mare.vidaUtil(0);
 							mare.capacidade(0);
@@ -147,6 +169,7 @@ public class TesteIndicacao {
 						}
 						if(op>5 || op<1)
 						{
+							System.out.println("\n\n");
 							System.out.println("\nOpção inválida. Tente novamente.");
 							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
 							op = leia.nextInt();
@@ -158,6 +181,7 @@ public class TesteIndicacao {
 					{
 					
 						{
+							System.out.println("\n\n");
 							System.out.println("\nOpção inválida. Tente novamente.");
 							System.out.println("\nEscolha um tipo de energia: \n1-Energia Solar \n2-Energia Biomassa \n3-Energia Eólica \n4-Energia Maremotriz \n5-Sair");
 							op = leia.nextInt();
@@ -166,9 +190,12 @@ public class TesteIndicacao {
 					
 					if(op==5)
 					{
+						System.out.println("\n\tIniciar verificação.");
+						
 						emp1.infoEmpresa();
 						emp1.consumo();
 						emp1.verificacao();
+						System.out.println("\n\n\nOperação finalizada.");
 					}
 				}
 			}
