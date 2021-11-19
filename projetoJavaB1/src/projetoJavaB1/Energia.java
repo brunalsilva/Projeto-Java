@@ -29,28 +29,7 @@ public abstract class Energia {
 	Scanner leia = new Scanner(System.in);
 
 	  public void cadastroEmpresa()
-	    {
-	        System.out.println("\nNome da Empresa: ");
-	        this.nomeEmpresa = leia.next();
-	        System.out.println("\nCNPJ: ");
-	        this.cnpj = leia.next();
-	        do
-	        {
-	        System.out.println("\n--CNPJ Inválido!!");
-	        }while(getCnpj().length() != 14);
-	        System.out.println("\nConsumo médio de energia da empresa em KWh/h: ");
-	        this.consumo = leia.nextFloat();
-	        System.out.println("\nOrçamento disponível: ");
-	        this.orcamento = leia.nextDouble(); 
-	        System.out.println("\nRegião que a empresa se situa: ");
-	        System.out.println("\n1- Norte ");
-	        System.out.println("\n2- Nordeste ");
-	        System.out.println("\n3- Centro oeste ");
-	        System.out.println("\n4- Sudeste ");
-	        System.out.println("\n5- Sul ");
-	        this.regiao = leia.nextInt();
-	        System.out.println("\nFaturamento da empresa: ");
-	        this.faturamento = leia.nextFloat();
+	    {	      
 	    }
 	    
     
