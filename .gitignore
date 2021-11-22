@@ -1,5 +1,4 @@
-/module-info.class
-/bin
-/classpath
-/project
-
+bin/
+.project
+.module-info.class
+.classpath
