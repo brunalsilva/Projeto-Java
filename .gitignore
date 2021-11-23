@@ -9,3 +9,7 @@
 *.zip
 *.tar.gz
 *.rar
+.bin/
+bin/
+*.project
+*.classpath
