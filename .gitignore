@@ -15,3 +15,5 @@ bin/
 *.classpath
 */projetoJavaB1/src/module-info.java /
 /projetoJavaB1/src/module-info.java /
+*.gitignore
+.gitignore
